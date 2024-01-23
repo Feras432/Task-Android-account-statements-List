@@ -7,7 +7,7 @@ class TransactionRepo {
      val transactionList = listOf(
         Transaction("Saving", 245.23, 4354.8, "KWD", "Withdrawal"),
         Transaction("Salary", 575.23, 3465.4, "KWD", "Deposit"),
-        Transaction("Investment", 3566.23, 554354.8, "KWD", "Deposit"),
+        Transaction("Invest", 3566.23, 554354.8, "KWD", "Deposit"),
     )
    }
 }

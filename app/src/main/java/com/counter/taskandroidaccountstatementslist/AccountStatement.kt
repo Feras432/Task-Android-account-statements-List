@@ -1,6 +1,7 @@
 package com.counter.taskandroidaccountstatementslist
 
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -30,10 +31,27 @@ fun AccountStatement(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.SpaceBetween,
             modifier = Modifier
-                .padding(8.dp)
+                .padding(20.dp)
                 .fillMaxSize()
         ) {
-            Text(text = "${transaction.name} ${transaction.amount} ${transaction.balance}  ${transaction.currency} ${transaction.type}")
+            Column {
+                Text(text = "${transaction.name}")
+
+            }
+            Row {
+                Text(text = "${transaction.balance}")
+                Text(text = "${transaction.currency}")
+            }
+            Column {
+                Text(text = "${transaction.type}")
+
+                    Row{
+
+                    Text(text = "${transaction.amount}")
+                    Text(text = "${transaction.currency}")
+                }
+
+            }
 
         }
     }
